@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="name"/>
+
+    <TextView
+        android:id="@+id/calTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="cal"/>
+
+    <TextView
+        android:id="@+id/goalTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="goal"/>
+
+    <Button
+        android:id="@+id/updateBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="update" />
+
+    <Button
+        android:id="@+id/deleteBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/text_margin"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="delete" />
+</LinearLayout>
