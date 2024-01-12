@@ -16,12 +16,14 @@ import java.util.List;
 
 public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerViewAdapter.ViewHolder> {
 
+    //the list of the data
     private List<FoodModel> mValues;
-    private final int MAX_ITEMS_COUNT = 50;
+
     public FoodRecyclerViewAdapter(List<FoodModel> items) {
         mValues = items;
     }
 
+    //called on each RecyclerView part creation
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -29,6 +31,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
 
     }
 
+    //sets the data from the list to the view holder
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
@@ -37,6 +40,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
         holder.goalTV.setText(String.valueOf(mValues.get(position).isGoalAchieved()));
     }
 
+    //returns the amount of data currently in the list
     @Override
     public int getItemCount() {
         return mValues.size();
@@ -85,7 +89,7 @@ public class FoodRecyclerViewAdapter extends RecyclerView.Adapter<FoodRecyclerVi
                 }
             }
             FoodFragment foodFragment = new FoodFragment();
-            FoodFragment.updated(context);
+            FoodFragment.updateList(context);
         }
     }
 }

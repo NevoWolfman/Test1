@@ -42,12 +42,13 @@ public class InputFragment extends Fragment {
                 DatabaseHelper db = new DatabaseHelper(requireContext());
 
                 FoodModel fm = getNewFood();
+                //checks the inputs and if adding to the db failed
                 if(fm == null || db.addFood(fm) == -1)
                 {
                     Toast.makeText(requireContext(), "Adding Failed", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    FoodFragment.updated(requireContext());
+                    FoodFragment.updateList(requireContext());
                 }
             }
         });
@@ -55,6 +56,7 @@ public class InputFragment extends Fragment {
         return view;
     }
 
+    //gets the inputs from the EditTexts and checks them
     public static FoodModel getNewFood()
     {
         String name = nameET.getText().toString();

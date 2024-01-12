@@ -45,6 +45,7 @@ class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //used for debugging to drop the table
     public void restartDB()
     {
         SQLiteDatabase db = this.getWritableDatabase();

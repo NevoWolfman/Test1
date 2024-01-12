@@ -28,7 +28,8 @@ public class FoodFragment extends Fragment {
 
     private static RecyclerView list;
 
-    public static void updated(Context context)
+    //deletes the list and creates it again from the DB
+    public static void updateList(Context context)
     {
         DatabaseHelper db = new DatabaseHelper(context);
         list.removeAllViews();
@@ -49,7 +50,7 @@ public class FoodFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_food_list, container, false);
         list = view.findViewById(R.id.list);
-        DatabaseHelper db = new DatabaseHelper(view.getContext());
+        DatabaseHelper db = new DatabaseHelper(view.getContext());//Err
 
 
         // Set the adapter
